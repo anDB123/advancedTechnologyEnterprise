@@ -1,18 +1,20 @@
 import matplotlib.pyplot as plt
 
-models = ["Model S", "Model S Plaid", "Model 3 Rear Wheel Drive", "Model 3 Long Range", "Model 3 Performance",
+models = ["Model S", "Model S Plaid", "Model 3 Rear Wheel Drive", "Model 3 Long Range",
+          "Model 3 Performance",
           "Model X",
           "Model X Plaid",
           "Model Y Long Range", "Model Y Performance"]
 prices = [99900, 135990, 46990, 55990, 62990, 114990, 138990, 62990, 67990]
 prices, models = zip(*sorted(zip(prices, models)))
 fig, ax = plt.subplots()
+ax.bar("Toyota Corolla", 20000)
 ax.bar(models, prices)
 ax.set_xlabel("Model Name")
 ax.set_ylabel("Model Price (USD)")
 plt.xticks(rotation=30, ha='right', rotation_mode='anchor')
 # plt.show()
-save_location = "C:/Users/AndyPC/Desktop/"
+save_location = "C:/Users/AndyPC/Desktop/ratioData/"
 plt.tight_layout()
 fig1 = plt.gcf()
 plt.show()
